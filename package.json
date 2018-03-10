@@ -1,0 +1,21 @@
+{
+  "name": "cli-a11y-nn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ximet/cli-a11y-nn.git"
+  },
+  "author": "XIMet",
+  "bugs": {
+    "url": "https://github.com/ximet/cli-a11y-nn/issues"
+  },
+  "homepage": "https://github.com/ximet/cli-a11y-nn#readme",
+  "dependencies": {
+    "deeplearn": "^0.5.1"
+  }
+}

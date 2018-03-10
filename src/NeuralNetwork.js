@@ -1,4 +1,4 @@
-import {
+const {
     Array1D,
     InCPUMemoryShuffledInputProviderBuilder,
     Graph,
@@ -6,7 +6,7 @@ import {
     SGDOptimizer,
     NDArrayMathGPU,
     CostReduction,
-} from 'deeplearn';
+} = require('deeplearn');
   
 const math = new NDArrayMathGPU();
 const INITIAL_LEARNING_RATE = 0.06;
@@ -118,4 +118,4 @@ class ContrastAccessibilityModel {
     }
 }
   
-export default ColorAccessibilityModel;
+module.exports = ColorAccessibilityModel;
