@@ -8,7 +8,6 @@ import {
     CostReduction,
 } from 'deeplearn';
   
-  // Encapsulates math operations on the CPU and GPU.
 const math = new NDArrayMathGPU();
 const INITIAL_LEARNING_RATE = 0.06;
 const BATCH_SIZE = 300;
@@ -60,7 +59,6 @@ class ContrastAccessibilityModel {
     }
   
     train(step, computeCost) {
-        // Every 50 steps, lower the learning rate by 10%.
         let learningRate = INITIAL_LEARNING_RATE * Math.pow(0.90, Math.floor(step / 50));
         this.optimizer.setLearningRate(learningRate);
     
@@ -75,7 +73,6 @@ class ContrastAccessibilityModel {
             computeCost ? CostReduction.MEAN : CostReduction.NONE,
             );
     
-            // Compute the cost (by calling get), which requires transferring data from the GPU.
             if (computeCost) {
                 costValue = cost.get();
             }
